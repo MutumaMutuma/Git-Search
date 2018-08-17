@@ -5,5 +5,5 @@ a{
     color:whitesmoke;
 }
 a:hover{
-    color: blueviolet;
+    color: rgba(135, 202, 185, 0.76);
 }

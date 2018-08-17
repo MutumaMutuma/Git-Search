@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+// import { NgProgressModule } from 'ngx-progressbar';
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -22,6 +22,7 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     HttpClientModule,
+    // NgProgressModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

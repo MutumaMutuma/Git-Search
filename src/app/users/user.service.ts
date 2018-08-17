@@ -8,5 +8,12 @@ export class UserService {
 private username:string;
 private clientid = '15cd6950f44b4a55184f';
 private clientsecret = '93ecf4793d399be285521596f16dfc9950680c66';
-  constructor(private http: HttpClientModule) { }
+
+  constructor(private http: HttpClientModule) {
+    console.log("service now ready");
+    this.username = 'MututmaMutuma';
+   }
+  //  getProfileInfo() {
+  //    return this.http.get("https://api.github.com/users/MutumaMutuma");
+  //  }
 } 
