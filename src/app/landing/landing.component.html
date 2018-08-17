@@ -1,18 +1,15 @@
 <!-- Image and text -->
 <nav style="background-color:#3b6c70 ;" class="navbar navbar-light">
    <h1> <a class="navbar-brand" href="#">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/2000px-Git-logo.svg.png" alt="" height="70px"class="d-inline-block align-top" alt="">
-    </a>  <span style="font-family: 'Cinzel Decorative', cursive; font-size: 40px;">Search</span></h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Git-logo-black.svg/500px-Git-logo-black.svg.png" alt="" height="70px"class="d-inline-block align-top" alt="">
+    </a>  <span style="font-family: 'Cinzel Decorative', cursive; font-size: 40px;">Search</span> <img src="https://www.softwarecrew.com/wp-content/uploads/2013/02/logo200-17517.png" alt="" height="70px"> </h1>
 
   </nav>
 <div style="background-color:#305659 ; background-size: cover; background-attachment: fixed; width: 100%; height: 100px; padding: 265px ;" class="landing">
   
     
   <div class="overlay">
-   <!--  -->
-   <!-- <div class="container">
-      <div class="text"></div>
-    </div> -->
+   
     <h1> <img src="https://i1.wp.com/linuxnewbieguide.org/wp-content/uploads/2017/03/github-logo.png?ssl=1" alt="" width="200px">  </h1>
     <p>This is where you can search for your fellow developers on Github</p>
     <p>Git search is created by lewis mutuma</p>
@@ -36,63 +33,7 @@
     </div>
     <br>
    <!--  -->
-   <a routerLink='/user' routerLinkActive='active'><button class="btn btn-outline-warning">Get Started >></button></a> 
+   
   </div>
 </div>
-<!-- script -->
-<script>
-  class TextScramble {
-  constructor(el) {
-    this.el = el;
-    this.chars = "!<>-_\\/[]{}—=+*^?#________";
-    this.update = this.update.bind(this);
-  }
-  setText(newText) {
-    const oldText = this.el.innerText;
-    const length = Math.max(oldText.length, newText.length);
-    const promise = new Promise(resolve => (this.resolve = resolve));
-    this.queue = [];
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || "";
-      const to = newText[i] || "";
-      const start = Math.floor(Math.random() * 40);
-      const end = start + Math.floor(Math.random() * 40);
-      this.queue.push({ from, to, start, end });
-    }
-    cancelAnimationFrame(this.frameRequest);
-    this.frame = 0;
-    this.update();
-    return promise;
-  }
-  update() {
-    let output = "";
-    let complete = 0;
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i];
-      if (this.frame >= end) {
-        complete++;
-        output += to;
-      } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar();
-          this.queue[i].char = char;
-        }
-        output += `<span class="dud">${char}</span>`;
-      } else {
-        output += from;
-      }
-    }
-    this.el.innerHTML = output;
-    if (complete === this.queue.length) {
-      this.resolve();
-    } else {
-      this.frameRequest = requestAnimationFrame(this.update);
-      this.frame++;
-    }
-  }
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)];
-  }
-}
-</script>
-<!--  -->
+

@@ -1,19 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
+import {environment} from '../../environments/environment'
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-private username:string;
-private clientid = '15cd6950f44b4a55184f';
-private clientsecret = '93ecf4793d399be285521596f16dfc9950680c66';
 
-  constructor(private http: HttpClientModule) {
-    console.log("service now ready");
-    this.username = 'MututmaMutuma';
-   }
-  //  getProfileInfo() {
-  //    return this.http.get("https://api.github.com/users/MutumaMutuma");
-  //  }
-} 
+  private userName:string;
+  private apiKey: string= environment.clientSecret;
+    constructor(public http: HttpClient) {
+  console.log('service is ready');
+  this.userName='MutumaMutuma';
+  
+    }
+  
+    getUserInfo(){
+      return this.http.get("https://api.github.com/users/" + this.userName + "?access_token=" + this.apiKey)
+    }
+  getUserRepos(){
+    return this.http.get("https://api.github.com/users/" + this.userName + "/repos?access_token=" + this.apiKey)
+  
+  }
+  
+  }
