@@ -1,22 +1,9 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
-html,
-body {
-  font-family: 'Roboto Mono', monospace;
-  background: #212121;
-  height: 100%;
+p{
+    color:whitesmoke;
 }
-.container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+a{
+    color:whitesmoke;
 }
-.text {
-  font-weight: 100;
-  font-size: 28px;
-  color: #fafafa;
-}
-.dud {
-  color: #757575;
+a:hover{
+    color: blueviolet;
 }
