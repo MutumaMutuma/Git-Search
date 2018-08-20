@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  clientSecret:'87c756cf3622c0cbdafdb05f62f619c7a83a9629'
+  clientSecret:'https://api.github.com/users/MutumaMutuma?access_token=87c756cf3622c0cbdafdb05f62f619c7a83a9629'
 };
 
 /*
