@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UserService} from './users/user.service';
+import {GitsearchRequestService} from './gitsearch-http/gitsearch-request.service';
 // import { NgProgressModule } from 'ngx-progressbar';
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ const routes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [UserService],
+  providers: [GitsearchRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
