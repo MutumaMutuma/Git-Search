@@ -9,8 +9,8 @@ import { Git } from '../git';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-constructor(){
   
+constructor(private http:HttpClient){
 }
     ngOnInit() {
     }
