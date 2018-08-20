@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { UserComponent } from './user/user.component';
+import { DateCountPipe } from './date-count.pipe';
+// import { Ngforms } from ''
 
 const routes:Routes=[
   {path:"landing",component:LandingComponent},
@@ -17,6 +19,7 @@ const routes:Routes=[
     AppComponent,
     LandingComponent,
     UserComponent,
+    DateCountPipe,
     
     
   ],
