@@ -20,7 +20,7 @@ export class GitsearchRequestService {
     }
 
     let promise =new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.clientSecret).toPromise().then(response=>{
+      this.http.get<ApiResponse>('https://api.github.com/users/MutumaMutuma?'+'access_token=87c756cf3622c0cbdafdb05f62f619c7a83a9629').toPromise().then(response=>{
         this.git.name=response.login
         this.git.avatar_url=response.avatar_url
         this.git.location=response.location
